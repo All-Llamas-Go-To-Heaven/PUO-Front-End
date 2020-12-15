@@ -8,8 +8,6 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <h1>Put Us On</h1>
-      <img src={logo} alt="this is the logo" />
       <Header />
     </div>
   );

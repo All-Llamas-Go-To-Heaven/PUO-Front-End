@@ -4,15 +4,18 @@ import styled from 'styled-components';
 
 const Nav = styled.nav`
 
+
 const Nav = () => {
 	return (
 		<div>
 			<div className='logo'>Nav</div>
-			<ul>Home</ul>
-			<ul>Create Project</ul>
-			<ul>Browse Projects</ul>
-			<ul>My Projects</ul>
-			<ul>LogIn</ul>
+			<ul>
+			<li>Home<li>
+			<li>Create Project</li>
+			<li>Browse Projects</li>
+			<li>My Projects</li>
+			<li>LogIn</li>
+			<ul>
 		</div>
 	);
 };
