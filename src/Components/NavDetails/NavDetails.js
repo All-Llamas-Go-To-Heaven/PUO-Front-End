@@ -42,12 +42,3 @@ export const NavDetails = [
 		cName: 'nav-text',
 	},
 ];
-// const NavDetails = () => {
-//     return (
-//         <div>
-            
-//         </div>
-//     );
-// };
-
-// export default NavDetails;
