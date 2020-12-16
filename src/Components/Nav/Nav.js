@@ -1,21 +1,43 @@
-import React from 'react';
-import { slide as Menu } from 'react-burger-menu'
-import styled from 'styled-components';
-
-const Nav = styled.nav`
-
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+import { FcMenu } from 'react-icons/fc';
+import { AiFillCloseCircle } from 'react-icons/ai';
+import { NavDetails } from '../NavDetails/NavDetails';
+import './Nav.css'
+import { IconContext } from 'react-icons';
 
 const Nav = () => {
+	const [sidebar, setSidebar] = useState(false);
+
+	const showSideBar = () => setSidebar(!sidebar);
 	return (
 		<div>
-			<div className='logo'>Nav</div>
-			<ul>
-			<li>Home<li>
-			<li>Create Project</li>
-			<li>Browse Projects</li>
-			<li>My Projects</li>
-			<li>LogIn</li>
-			<ul>
+			<IconContext.Provider value={{color: 'white'}}>
+				<div className='navbar'>
+					<Link to='#' className='menu-bars'>
+						<FcMenu onClick={showSideBar} />
+					</Link>
+				</div>
+				<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+					<ul className='nav-menu-items' onClick={showSideBar}>
+						<li className='navbar-toggle'>
+							<Link to='#' className='menu-bars'>
+								<AiFillCloseCircle />
+							</Link>
+						</li>
+						{NavDetails.map((menuItem, index) => {
+							return (
+								<li key={index} className={menuItem.cName}>
+									<Link to={menuItem.path}>
+										{menuItem.icon}
+										<span>{menuItem.title}</span>
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+				</nav>
+			</IconContext.Provider>
 		</div>
 	);
 };

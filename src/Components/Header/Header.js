@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from '../../Images/PutUsOnLogoJPG.jpg';
+import './Header.css'
 const Header = () => {
     return (
 			<div>
-				<img src={logo} alt='this is the logo' />
+				<img className='puo-logo' src={logo} alt='this is the logo' />
 			</div>
 		);
 };
