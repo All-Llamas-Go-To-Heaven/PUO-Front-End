@@ -1,13 +1,11 @@
 import React from 'react';
 
-const ListCard = () => {
+const RecentProjects = () => {
     return (
         <div>
-        <button>
             
-        </button>
         </div>
     );
 };
 
-export default ListCard;
+export default RecentProjects;

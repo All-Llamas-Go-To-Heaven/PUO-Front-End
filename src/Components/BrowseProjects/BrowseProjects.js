@@ -3,7 +3,7 @@ import React from 'react';
 const BrowseProjects = () => {
     return (
         <div>
-            Projects
+            <h2>Browse Projects Created by Puo Users:</h2>
         </div>
     );
 };

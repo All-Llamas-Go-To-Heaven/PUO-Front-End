@@ -36,7 +36,7 @@ export const NavDetails = [
 		cName: 'nav-text',
 	},
 	{
-		title: 'Log In',
+		title: 'Log In / Sign Up',
 		path: '/login',
 		icon: <AiOutlineLaptop />,
 		cName: 'nav-text',

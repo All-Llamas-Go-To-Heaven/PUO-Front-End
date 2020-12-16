@@ -3,7 +3,10 @@ import React from 'react';
 const CreateProject = () => {
     return (
         <div>
-           Create 
+           <form>
+               <h1>Create Project</h1>
+               <label htmlfor='title'>Title:</label>
+           </form>
         </div>
     );
 };

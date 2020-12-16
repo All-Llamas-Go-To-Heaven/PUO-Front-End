@@ -1,3 +1,4 @@
+
 .main-footer{
     color: rgb(253, 255, 255);
     background-color: rgb(46, 45, 45);
@@ -19,9 +20,7 @@
     display: inline-flex;
     color: rgb(10, 240, 217);
     font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-
-
+    font-family: 'Arial';
 }
 
 .main-footer a:hover{

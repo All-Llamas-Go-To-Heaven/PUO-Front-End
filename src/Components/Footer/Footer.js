@@ -34,7 +34,7 @@ const Footer = () => {
 						<ul className='list-unstyled'>
 							<li>
 								<a href='https://www.linkedin.com/in/nickos-papageorge/'>
-									LinkedIN{' '}
+									LinkedIn{' '}
 								</a>
 							</li>
 						</ul>
