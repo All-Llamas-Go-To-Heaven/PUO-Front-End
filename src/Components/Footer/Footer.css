@@ -24,6 +24,7 @@
 }
 
 .main-footer a:hover{
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+   background-color:  rgb(10, 240, 217);
+   color: white;
    font-size: 110%;
 }
