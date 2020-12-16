@@ -3,7 +3,9 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            Home
+           <div className= 'App'>
+               <h1>Put Us ON</h1>
+           </div>
         </div>
     );
 };

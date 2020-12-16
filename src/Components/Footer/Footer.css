@@ -1,0 +1,30 @@
+.main-footer{
+    color: rgb(253, 255, 255);
+    background-color: rgb(46, 45, 45);
+    /* padding-top: 1em; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+   
+
+    
+}
+.main-footer li{
+    display: inline-flex;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main-footer a{
+    display: inline-flex;
+    color: rgb(10, 240, 217);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+
+}
+
+.main-footer a:hover{
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+   font-size: 110%;
+}
