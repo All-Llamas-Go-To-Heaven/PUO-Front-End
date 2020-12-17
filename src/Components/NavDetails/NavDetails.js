@@ -1,4 +1,3 @@
-import React from 'react';
 import { FcMenu } from 'react-icons/fc';
 import {
 	AiFillHome,

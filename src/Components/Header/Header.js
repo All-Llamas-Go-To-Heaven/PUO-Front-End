@@ -5,6 +5,7 @@ const Header = () => {
     return (
 			<div>
 				<img className='puo-logo' src={logo} alt='this is the logo' />
+				
 			</div>
 		);
 };
