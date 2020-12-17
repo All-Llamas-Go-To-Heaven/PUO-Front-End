@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 
 const SignUp = () => {
@@ -19,7 +19,11 @@ const SignUp = () => {
          Axios({
             url: 'http://localhost:8000/users/',
             method: 'POST',
-            data: formState,   
+			data: formState, 
+			headers: {
+				"Accept": "application/json", 
+				"Content-Type": "application/json"
+			}  
          }).then((res) => {
          console.log(res)
         //  localStorage.setItem('token', res.data.auth_token)
@@ -27,7 +31,7 @@ const SignUp = () => {
          })
     }
     return (
-			<div className="sign-up-box">
+			<div className='sign-up-box'>
 				<h1>Sign Up</h1>
 				<form onSubmit={handleSubmit}>
 					<label>Username:</label>
@@ -38,7 +42,7 @@ const SignUp = () => {
 						onChange={handleChange}
 						value={formState.username}
 					/>
-                    <label>Email:</label>
+					<label>Email:</label>
 					<input
 						type='text'
 						name='email'
@@ -46,7 +50,7 @@ const SignUp = () => {
 						onChange={handleChange}
 						value={formState.email}
 					/>
-                    <label>Password:</label>
+					<label>Password:</label>
 					<input
 						name='password'
 						id='password'
@@ -54,7 +58,7 @@ const SignUp = () => {
 						onChange={handleChange}
 						value={formState.password}
 					/>
-                    <label>Re-Enter Password:</label>
+					<label>Re-Enter Password:</label>
 					<input
 						name='re_password'
 						id='re_password'
@@ -62,7 +66,8 @@ const SignUp = () => {
 						onChange={handleChange}
 						value={formState.re_password}
 					/>
-					<input type='submit' value='Submit' />
+					<button type='submit'>Submit</button>
+					<button type='click'>Cancel</button>
 				</form>
 			</div>
 		);

@@ -12,6 +12,7 @@ import SignUp from './Components/SignUp/SignUp';
 
 function App() {
  const [logIn, setLogIn] = useState(localStorage.getItem('token') ? true:false)
+ const [token, setToken] = useState()
 	return (
 		<div className='App'>
 			<div className='page-containers'>
@@ -26,7 +27,7 @@ function App() {
 							<Route
 								path='/login'
 								exact
-								render={() => <LogIn setLogIn={setLogIn} />}
+								render={() => <LogIn setLogIn={setLogIn} logIn={logIn}setToken ={setToken} token={token}/>}
 							/>
 							<Route
 								path='/signup'
