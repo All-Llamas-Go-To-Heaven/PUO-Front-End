@@ -9,6 +9,7 @@ import CreateProject from './Components/CreateProject/CreateProject';
 import LogIn from './Components/LogIn/LogIn';
 import Footer from './Components/Footer/Footer';
 import SignUp from './Components/SignUp/SignUp';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
  const [logIn, setLogIn] = useState(localStorage.getItem('token') ? true:false)
@@ -18,7 +19,7 @@ function App() {
 			<div className='page-containers'>
 				<div className='content-wrap'>
 					<Router>
-						<Nav />
+						<Nav  setLogIn= {setLogIn}/>
 						<Header />
 						<Switch>
 							<Route path='/' exact component={Home} />
@@ -27,13 +28,17 @@ function App() {
 							<Route
 								path='/login'
 								exact
-								render={() => <LogIn setLogIn={setLogIn} logIn={logIn}setToken ={setToken} token={token}/>}
+								render={() => (
+									<LogIn
+										setLogIn={setLogIn}
+										logIn={logIn}
+										setToken={setToken}
+										token={token}
+									/>
+								)}
 							/>
-							<Route
-								path='/signup'
-								exact
-								render={() => <SignUp />}
-							/>
+							<Route path='/signup' exact render={() => <SignUp />} />
+							<Route path='/search' exact render={() => <SearchBar />} />
 						</Switch>
 					</Router>
 					<Footer />

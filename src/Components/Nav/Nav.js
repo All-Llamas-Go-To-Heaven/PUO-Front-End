@@ -1,18 +1,32 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { FcMenu } from 'react-icons/fc';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { NavDetails } from '../NavDetails/NavDetails';
-import './Nav.css'
+import './Nav.css';
 import { IconContext } from 'react-icons';
-
-const Nav = () => {
+import Axios from 'axios';
+const Nav = ({ setLogIn }) => {
 	const [sidebar, setSidebar] = useState(false);
+	const history = useHistory();
+	const handleLogOut = () => {
+		// first clear local storage
+		setLogIn(false);
+		Axios({method:'POST', url:'http://localhost:8000/token/logout', 
+			headers: {
+				"Authorization": `Token ${localStorage.getItem('token')}`,
+			
+		}}).then((res) => {
+			localStorage.clear();
+			console.log(res);
+			history.push('/');
+		});
+	};
 
 	const showSideBar = () => setSidebar(!sidebar);
 	return (
 		<div>
-			<IconContext.Provider value={{color: 'white'}}>
+			<IconContext.Provider value={{ color: 'white' }}>
 				<div className='navbar'>
 					<Link to='#' className='menu-bars'>
 						<FcMenu onClick={showSideBar} />
@@ -38,6 +52,8 @@ const Nav = () => {
 					</ul>
 				</nav>
 			</IconContext.Provider>
+
+			<button onClick={handleLogOut}>Log Out</button>
 		</div>
 	);
 };
