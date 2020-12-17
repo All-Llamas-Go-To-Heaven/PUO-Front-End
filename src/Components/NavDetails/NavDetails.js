@@ -25,6 +25,12 @@ export const NavDetails = [
 		cName: 'nav-text',
 	},
 	{
+		title: 'Search',
+		path: '/search',
+		icon: <AiOutlineBulb />,
+		cName: 'nav-text',
+	},
+	{
 		title: 'Browse Projects',
 		path: '/projects',
 		icon: <AiFillTrophy />,
