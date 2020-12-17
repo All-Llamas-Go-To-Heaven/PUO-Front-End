@@ -24,25 +24,37 @@ const LogIn = ({ setLogIn }) => {
          })
     }
     return (
-        <div className="sign-up-box">
-            
-            <form onSubmit={handleSubmit}>
-                <h1>Log In</h1>
-                <label>
-                    Email:
-                </label>
-                    <input type="text" name="email" id="email" onChange={handleChange} value={formState.email}/>
-                <label>
-                    Password:
-                </label>
-                    <input name="password" id="password" type="password" onChange={handleChange} value={formState.password}/>
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
-    );
+			<div className='sign-up-box'>
+				<form onSubmit={handleSubmit}>
+					<h1>Log In</h1>
+					<label>Email:</label>
+					<input
+						type='text'
+						name='email'
+						id='email'
+						onChange={handleChange}
+						value={formState.email}
+					/>
+					<label>Password:</label>
+					<input
+						name='password'
+						id='password'
+						type='password'
+						onChange={handleChange}
+						value={formState.password}
+					/>
+					<button type='submit'>
+						Submit
+					</button>
+					<button type='click'>
+						Cancel
+					</button>
+                    <p>Don't have an account?&nbsp;
+                        <a href='/signup'>Sign Up</a>
+                    </p>
+				</form>
+			</div>
+		);
 };
 
 export default LogIn;
-
-
-
