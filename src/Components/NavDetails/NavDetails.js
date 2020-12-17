@@ -6,6 +6,7 @@ import {
 	AiOutlineLaptop,
 	AiFillTrophy,
 	AiOutlineBulb,
+	AiFillFrown,
 } from 'react-icons/ai';
 import { IoIcons} from 'react-icons/io';
 
@@ -39,6 +40,12 @@ export const NavDetails = [
 		title: 'Log In / Sign Up',
 		path: '/login',
 		icon: <AiOutlineLaptop />,
+		cName: 'nav-text',
+	},
+	{
+		title: 'Log Out',
+		path: '/',
+		icon: <AiFillFrown />,
 		cName: 'nav-text',
 	},
 ];
