@@ -47,10 +47,10 @@ export const NavDetails = [
 		icon: <AiOutlineLaptop />,
 		cName: 'nav-text',
 	},
-	{
-		title: 'Log Out',
-		path: '/',
-		icon: <AiFillFrown />,
-		cName: 'nav-text',
-	},
+	// {
+	// 	title: 'Log Out',
+	// 	path: '/',
+	// 	icon: <AiFillFrown />,
+	// 	cName: 'nav-text',
+	// },
 ];
