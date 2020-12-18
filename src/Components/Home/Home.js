@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <div className='App'>
-                <h2>Recently Created:</h2>
+                <h2>Created Projects:</h2>
                 <Link to='/projects'>More Projects</Link>
             </div>
         </div>

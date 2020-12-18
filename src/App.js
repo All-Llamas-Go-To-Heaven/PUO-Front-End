@@ -10,6 +10,7 @@ import LogIn from './Components/LogIn/LogIn';
 import Footer from './Components/Footer/Footer';
 import SignUp from './Components/SignUp/SignUp';
 import SearchBar from './Components/SearchBar/SearchBar';
+import MyProjects from './Components/MyProjects/MyProjects';
 
 function App() {
  const [logIn, setLogIn] = useState(localStorage.getItem('token') ? true:false)
@@ -19,7 +20,7 @@ function App() {
 			<div className='page-containers'>
 				<div className='content-wrap'>
 					<Router>
-						<Nav  setLogIn= {setLogIn}/>
+						<Nav setLogIn={setLogIn} />
 						<Header />
 						<Switch>
 							<Route path='/' exact component={Home} />
@@ -39,6 +40,8 @@ function App() {
 							/>
 							<Route path='/signup' exact render={() => <SignUp />} />
 							<Route path='/search' exact render={() => <SearchBar />} />
+							<Route path='/user' exact render={() => 
+							<MyProjects />} />
 						</Switch>
 					</Router>
 					<Footer />
