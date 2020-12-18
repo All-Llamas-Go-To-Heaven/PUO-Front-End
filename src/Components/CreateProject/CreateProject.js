@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 
-const CreateProject = () => {
+const CreateProject = ({ history }) => {
 	const [formState, setFormState] = useState({
 		name: '',
 		language_used: '',
@@ -17,22 +17,23 @@ const CreateProject = () => {
 	};
 	const handleSubmit = (event) => {
         event.preventDefault();
-        const token = localStorage.getItem('token')
+		const token = localStorage.getItem('token')
+		const data = new FormData(event.target)
 		Axios({
 			url: 'https://put-us-on-backend.herokuapp.com/project_submissions/',
 			method: 'POST',
-            data: formState,
+            data,
             headers: {
                 'Authorization': `Token ${token}` 
             }
 		}).then((res) => {
-			console.log(res);
+			history.push('/user');
 		});
 	};
 	return (
 		<div className='sign-up-box'>
 			<h2>Create a project</h2>
-			<form onSubmit={handleSubmit}>
+			<form encType='multipart/form-data' onSubmit={handleSubmit}>
 				<label>Name:</label>
 				<input
 					type='text'
@@ -67,11 +68,9 @@ const CreateProject = () => {
 				/>
 				<label>Project photo:</label>
 				<input
-					type='text'
+					type='file'
 					name='project_photo'
 					id='project_photo'
-					onChange={handleChange}
-					value={formState.project_photo}
 				/>
 				<label>Project url:</label>
 				<input
