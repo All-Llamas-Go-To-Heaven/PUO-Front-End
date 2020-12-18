@@ -4,6 +4,7 @@ import {
 	AiOutlineLaptop,
 	AiFillTrophy,
 	AiOutlineBulb,
+	AiFillSecurityScan,
 } from 'react-icons/ai';
 
 
@@ -24,15 +25,15 @@ export const NavDetails = [
 	{
 		title: 'Search',
 		path: '/search',
-		icon: <AiOutlineBulb />,
+		icon: <AiFillSecurityScan />,
 		cName: 'nav-text',
 	},
-	{
-		title: 'Browse Projects',
-		path: '/projects',
-		icon: <AiFillTrophy />,
-		cName: 'nav-text',
-	},
+	// {
+	// 	title: 'Browse Projects',
+	// 	path: '/projects',
+	// 	icon: <AiFillTrophy />,
+	// 	cName: 'nav-text',
+	// },
 	{
 		title: 'My Projects',
 		path: '/user/',

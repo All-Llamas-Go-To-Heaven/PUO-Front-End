@@ -18,7 +18,7 @@ const PortfolioDetails = () => {
 				{portfolio.map((data, key) => {
 						return (
 							<div className='results' key={key}>
-								<Link>{data.name}</Link>
+								<h2 className='portfolio-name'>{data.name}</h2>
                                 <img src={data.project_photo} alt='project images'/>
 							</div>
 						);

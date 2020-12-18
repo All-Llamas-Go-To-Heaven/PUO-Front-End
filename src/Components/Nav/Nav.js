@@ -6,6 +6,7 @@ import { NavDetails } from '../NavDetails/NavDetails';
 import './Nav.css';
 import { IconContext } from 'react-icons';
 import Axios from 'axios';
+
 const Nav = ({ setLogIn }) => {
 	const [sidebar, setSidebar] = useState(false);
 	const history = useHistory();
