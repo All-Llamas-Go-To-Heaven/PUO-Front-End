@@ -19,7 +19,7 @@ const PortfolioDetails = () => {
 						return (
 							<div className='results' key={key}>
 								<Link>{data.name}</Link>
-                                <img src={data.project_photo}/>
+                                <img src={data.project_photo} alt='project images'/>
 							</div>
 						);
 					})}

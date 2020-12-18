@@ -26,7 +26,7 @@ const SearchBar = () => {
 			/>
 
 			{projects.filter((data) => {
-				if (searchProject == '') {
+				if (searchProject === '') {
 					return data;
 				} else if (
 					data.language_used.toLowerCase().includes(searchProject.toLowerCase())

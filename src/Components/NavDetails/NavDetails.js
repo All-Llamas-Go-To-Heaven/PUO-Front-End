@@ -1,13 +1,11 @@
-import { FcMenu } from 'react-icons/fc';
 import {
 	AiFillHome,
 	AiFillEdit,
 	AiOutlineLaptop,
 	AiFillTrophy,
 	AiOutlineBulb,
-	AiFillFrown,
 } from 'react-icons/ai';
-import { IoIcons} from 'react-icons/io';
+
 
 
 export const NavDetails = [
@@ -47,10 +45,4 @@ export const NavDetails = [
 		icon: <AiOutlineLaptop />,
 		cName: 'nav-text',
 	},
-	// {
-	// 	title: 'Log Out',
-	// 	path: '/',
-	// 	icon: <AiFillFrown />,
-	// 	cName: 'nav-text',
-	// },
 ];
