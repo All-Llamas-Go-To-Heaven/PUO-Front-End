@@ -12,11 +12,13 @@ const Nav = ({ setLogIn }) => {
 	const handleLogOut = () => {
 		// first clear local storage
 		setLogIn(false);
-		Axios({method:'POST', url:'http://localhost:8000/token/logout', 
+		Axios({
+			method: 'POST',
+			url: 'https://put-us-on-backend.herokuapp.com/token/logout',
 			headers: {
-				"Authorization": `Token ${localStorage.getItem('token')}`,
-			
-		}}).then((res) => {
+				Authorization: `Token ${localStorage.getItem('token')}`,
+			},
+		}).then((res) => {
 			localStorage.clear();
 			console.log(res);
 			history.push('/');

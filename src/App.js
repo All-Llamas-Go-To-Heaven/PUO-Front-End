@@ -12,9 +12,10 @@ import SignUp from './Components/SignUp/SignUp';
 import SearchBar from './Components/SearchBar/SearchBar';
 import MyProjects from './Components/MyProjects/MyProjects';
 
+
 function App() {
  const [logIn, setLogIn] = useState(localStorage.getItem('token') ? true:false)
- const [token, setToken] = useState()
+//  const [token, setToken] = useState()
 	return (
 		<div className='App'>
 			<div className='page-containers'>
@@ -29,16 +30,15 @@ function App() {
 							<Route
 								path='/login'
 								exact
-								render={() => (
+								render={({ history }) => (
 									<LogIn
 										setLogIn={setLogIn}
 										logIn={logIn}
-										setToken={setToken}
-										token={token}
+										history={history}
 									/>
 								)}
 							/>
-							<Route path='/signup' exact render={() => <SignUp />} />
+							<Route path='/signup' exact component={SignUp} />
 							<Route path='/search' exact render={() => <SearchBar />} />
 							<Route path='/user' exact render={() => 
 							<MyProjects />} />

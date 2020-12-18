@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PortfolioDetails from '../PortfolioDetails/PortfolioDetails'
 
 const Home = () => {
     return (
         <div>
             <div className='App'>
-                <h2>Created Projects:</h2>
+                <h2>Projects Created</h2>
+                <PortfolioDetails />
                 <Link to='/projects'>More Projects</Link>
+                
+
             </div>
         </div>
     );
